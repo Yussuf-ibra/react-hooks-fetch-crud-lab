@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const BaseUrl = "http://localhost:4000/questions";
+
 function QuestionForm(props) {
   const [formData, setFormData] = useState({
     prompt: "",
@@ -19,7 +19,7 @@ function QuestionForm(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch(BaseUrl, {
+    fetch("http://localhost:4000/questions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

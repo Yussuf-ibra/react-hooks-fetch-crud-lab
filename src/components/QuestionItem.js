@@ -9,13 +9,13 @@ function QuestionItem({ question, onDeleteClick, onAnswerChange }) {
     </option>
   ));
 
-  const handleDeleteClick = () => {
+  function handleDeleteClick() {
     onDeleteClick(id);
-  };
+  }
 
-  const handleAnswerChange = (event) => {
+  function handleAnswerChange(event) {
     onAnswerChange(id, parseInt(event.target.value));
-  };
+  }
 
   return (
     <li>
